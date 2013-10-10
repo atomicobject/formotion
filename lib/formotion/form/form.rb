@@ -206,7 +206,7 @@ module Formotion
 
     def sub_render
       kv = {}
-      rows = sections.map(&:rows).flatten
+      rows = sections.map { |x| x.rows }.flatten
       subform_rows = rows.select{ |row| row.subform != nil }
       subform_rows.each do |subform_row|
         kv[subform_row.key] = subform_row.subform.to_form.render
