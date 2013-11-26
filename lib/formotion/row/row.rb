@@ -210,7 +210,7 @@ module Formotion
     end
 
     def subform?
-      self.type.to_s == "subform"
+      !!(self.type.to_s =~ /^\w*subform$/)
     end
 
     def templated?
