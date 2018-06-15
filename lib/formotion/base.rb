@@ -1,4 +1,4 @@
-motion_require 'row_type/base'
+
 
 module Formotion
   class Base
